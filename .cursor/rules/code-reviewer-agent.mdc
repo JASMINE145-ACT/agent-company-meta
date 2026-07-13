@@ -1,5 +1,5 @@
 ---
-description: Code review agent identity — Superpowers code-reviewer + project Layer A/B
+description: Code review agent identity — Superpowers code-reviewer + platform Layer A
 alwaysApply: true
 ---
 
@@ -14,22 +14,22 @@ After code changes in this repo, **code-review** means the **Superpowers `code-r
 | **Invoke** | `Task` / subagent `subagent_type: "code-reviewer"` |
 | **Plugin base** | Superpowers `agents/code-reviewer.md` |
 | **Base path (this machine)** | `C:\Users\m1774\.cursor\plugins\cache\cursor-public\superpowers\b7a8f76985f1e93e75dd2f2a3b424dc731bd9d37\agents\code-reviewer.md` |
-| **Project extension** | `.cursor/agents/code-reviewer.md` (Layer A + Layer B; same `name: code-reviewer`) |
+| **Project extension** | `.cursor/agents/code-reviewer.md` (Layer A; same `name: code-reviewer`) |
 
 Do **not** substitute `generalPurpose`, `trellis-check`, or inline review for this gate unless the user explicitly asks.
 
-## Project gates (on top of Superpowers base)
+## Project gates
 
-1. **Layer A** — `.trellis/spec/code-review-layer-a.md` (A1–A6: picker / settings / routing identity / **consumer-plane completeness**)
-2. **Layer B** — `.trellis/spec/frontend/layer-b-renderer-review.md` (`renderer/**` only)
+1. **Layer A** — `.trellis/spec/code-review-layer-a.md` (boundary scanners + contract wiring)
+2. **Layer B** — N/A until UI renderer exists in this repo
 
-**Order:** code-reviewer PASS → test-agent / vitest → docs / Trellis.
+**Order:** code-reviewer PASS → tests/smokes → docs / Trellis.
 
 ## Verdict must include
 
 ```text
 Layer A: PASS | FAIL | N/A
-Layer B: PASS | FAIL | N/A
+Layer B: N/A
 Runtime Crash Checklist: ...
 ```
 

@@ -1,0 +1,118 @@
+﻿{
+    "config_options":  [
+                           {
+                               "category":  "mode",
+                               "currentValue":  "bypassPermissions",
+                               "description":  "Session permission mode",
+                               "id":  "mode",
+                               "name":  "Mode",
+                               "options":  [
+                                               {
+                                                   "description":  "Standard behavior, prompts for dangerous operations",
+                                                   "name":  "Default",
+                                                   "value":  "default"
+                                               },
+                                               {
+                                                   "description":  "Auto-accept file edit operations",
+                                                   "name":  "Accept Edits",
+                                                   "value":  "acceptEdits"
+                                               },
+                                               {
+                                                   "description":  "Planning mode, no actual tool execution",
+                                                   "name":  "Plan Mode",
+                                                   "value":  "plan"
+                                               },
+                                               {
+                                                   "description":  "Use a model classifier to approve/deny permission prompts.",
+                                                   "name":  "Auto",
+                                                   "value":  "auto"
+                                               },
+                                               {
+                                                   "description":  "Skip all permission checks",
+                                                   "name":  "Bypass Permissions",
+                                                   "value":  "bypassPermissions"
+                                               },
+                                               {
+                                                   "description":  "Don\u0027t prompt for permissions, deny if not pre-approved",
+                                                   "name":  "Don\u0027t Ask",
+                                                   "value":  "dontAsk"
+                                               }
+                                           ],
+                               "type":  "select"
+                           },
+                           {
+                               "category":  "model",
+                               "currentValue":  "minimax-m3",
+                               "description":  "AI model to use",
+                               "id":  "model",
+                               "name":  "Model",
+                               "options":  [
+                                               {
+                                                   "description":  "Use the default model (currently minimax-m3) Â· $3/$15 per Mtok",
+                                                   "name":  "Default (recommended)",
+                                                   "value":  ""
+                                               },
+                                               {
+                                                   "description":  "Opus 4.7 Â· Most capable for complex work Â· $5/$25 per Mtok",
+                                                   "name":  "Opus 4.7",
+                                                   "value":  "opus"
+                                               },
+                                               {
+                                                   "description":  "Opus 4.7 with 1M context Â· $5/$25 per Mtok",
+                                                   "name":  "Opus 4.7 (1M context)",
+                                                   "value":  "opus[1m]"
+                                               },
+                                               {
+                                                   "description":  "Opus 4.6 with 1M context Â· $5/$25 per Mtok",
+                                                   "name":  "Opus 4.6 (1M context)",
+                                                   "value":  "claude-opus-4-6[1m]"
+                                               },
+                                               {
+                                                   "description":  "Sonnet 4.6 for long sessions Â· $3/$15 per Mtok",
+                                                   "name":  "Sonnet (1M context)",
+                                                   "value":  "sonnet[1m]"
+                                               },
+                                               {
+                                                   "description":  "Haiku 4.5 Â· Fastest for quick answers Â· $1/$5 per Mtok",
+                                                   "name":  "Haiku",
+                                                   "value":  "haiku"
+                                               }
+                                           ],
+                               "type":  "select"
+                           },
+                           {
+                               "category":  "thought_level",
+                               "currentValue":  "default",
+                               "description":  "Available effort levels for this model",
+                               "id":  "effort",
+                               "name":  "Effort",
+                               "options":  [
+                                               {
+                                                   "name":  "Default",
+                                                   "value":  "default"
+                                               },
+                                               {
+                                                   "name":  "Low",
+                                                   "value":  "low"
+                                               },
+                                               {
+                                                   "name":  "Medium",
+                                                   "value":  "medium"
+                                               },
+                                               {
+                                                   "name":  "High",
+                                                   "value":  "high"
+                                               },
+                                               {
+                                                   "name":  "Xhigh",
+                                                   "value":  "xhigh"
+                                               },
+                                               {
+                                                   "name":  "Max",
+                                                   "value":  "max"
+                                               }
+                                           ],
+                               "type":  "select"
+                           }
+                       ]
+}

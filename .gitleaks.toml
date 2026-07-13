@@ -1,0 +1,20 @@
+# Gitleaks â€?agent-company platform
+# Extend allowlist only with justification in PR.
+title = "agent-company-meta gitleaks"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Example templates and Trellis research notes"
+paths = [
+  '''\.mcp\.json\.example$''',
+  '''\.env\.example$''',
+  '''\.trellis/tasks/.*/research/''',
+  '''scripts/__fixtures__/''',
+]
+regexTarget = "match"
+regexes = [
+  '''CHANGE_ME''',
+  '''YOUR_[A-Z0-9_]+''',
+]

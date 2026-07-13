@@ -1,0 +1,8 @@
+[shell_environment_policy]
+inherit = "core"
+
+[shell_environment_policy.set]
+CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR = "1"
+
+# No product MCP servers yet. Add under [mcp_servers.*] when needed.
+# Do not point at sample-ccb or legacy WanD deploy MCP from platform.

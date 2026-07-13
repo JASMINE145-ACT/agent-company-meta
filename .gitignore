@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+
+# platform is a separate git repository (not a submodule in MVP).
+# Work and commit inside platform/; do not add its tree to meta.
+/platform/

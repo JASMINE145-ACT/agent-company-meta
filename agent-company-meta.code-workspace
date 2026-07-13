@@ -1,0 +1,10 @@
+{
+  "folders": [
+    { "path": ".", "name": "meta" },
+    { "path": "platform", "name": "platform" },
+    { "path": "sample-ccb", "name": "sample-ccb (read-only)" }
+  ],
+  "settings": {
+    "files.exclude": {}
+  }
+}
